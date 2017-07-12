@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import HelloWorld from './components/HelloWorld/HelloWorld';
+import HelloWorldList from './components/HelloWorldList';
 
 class App extends Component {
   render() {
@@ -14,8 +14,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <HelloWorld name="Jim" />
-        <HelloWorld name="Sally" />
+        <HelloWorldList />
       </div>
     );
   }

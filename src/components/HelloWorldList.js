@@ -3,11 +3,19 @@ import HelloWorld from './HelloWorld';
 import './HelloWorldList.css';
 
 class HelloWorldList extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { greetings: ['Jim', 'Sally', 'Bender'] };
+  }
+  renderGreetings() {
+    return this.state.greetings.map(name => (
+      <HelloWorld key={name} name={name}/>
+    ));
+  }
   render() {
     return (
       <div className="HelloWorldList">
-        <HelloWorld name="Jim"/>
-        <HelloWorld name="Sally"/>
+        {this.renderGreetings()}
       </div>
     );
   }
